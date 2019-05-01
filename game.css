@@ -1,0 +1,30 @@
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+#tabImg img{
+  width: 500px;
+}
+
+#priceImg img{
+  width: 350px;
+}
+
+.top{
+  margin-top: 50px;
+}
+
+.text{
+  /* margin-left: 50px; */
+}
+
+ul{
+  list-style: none;
+}

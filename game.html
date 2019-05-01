@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+
+    <div class="row top">
+      <div class="col-2"></div>
+      <div class="col-4">
+
+
+        <div class="ul" id=ul>
+          <span>全部最後總積分</span><br><br>
+          <ul>
+            <li>第一小隊: </li>
+            <li>第二小隊: </li>
+            <li>第三小隊: </li>
+            <li>第四小隊: </li>
+            <li>第五小隊: </li>
+            <li>第六小隊: </li>
+            <li>第七小隊: </li>
+            <li>第八小隊: </li>
+          </ul>
+        </div>
+
+        <div class="ul" id=ul2>
+          <span>各小隊買了哪關的道具(第一關-第六關是左到右)</span><br><br>
+          <ul>
+            <li>第一小隊買道具的關卡: </li>
+            <li>第二小隊買道具的關卡: </li>
+            <li>第三小隊買道具的關卡: </li>
+            <li>第四小隊買道具的關卡: </li>
+            <li>第五小隊買道具的關卡: </li>
+            <li>第六小隊買道具的關卡: </li>
+            <li>第七小隊買道具的關卡: </li>
+            <li>第八小隊買道具的關卡: </li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 30px;">
+          <span>每回合積分累計表</span>
+        </div>
+            <table class="table top" id=cumulative style="text-align:center; margin-top:30px;">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">1</th>
+                  <th scope="col">2</th>
+                  <th scope="col">3</th>
+                  <th scope="col">4</th>
+                  <th scope="col">5</th>
+                  <th scope="col">6</th>
+                  <th scope="col">7</th>
+                  <th scope="col">8</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">賣出後</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+        <div class="Img top" id=priceImg>
+          <img src="price.png" alt="123">
+        </div>
+      </div>
+
+      <div class="col-1"></div>
+
+      <div class="col-4">
+
+        <div class="text">
+          <span>刷新就是重算哦！ 兩方贏的機率各半，正下方表格是模擬大關贏的組
+            <br>假設每組在每關最多買一個道具，買東西的機率預設0.5 (錢夠才能買)
+            <br>遇到攤販時如果商品比買的時候便宜那賣掉的機率0.3 (畢竟虧錢)
+            <br>如果賣商品比買的時候貴那賣掉的機率 = 1 (有賣有賺)
+            <br>預設每組在遊戲結束之前都有遇到兩個流動攤販
+            <br>並且先遇到哪個攤販是隨機！</span>
+        </div>
+
+
+          <!-- <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">第1組贏的機率</label>
+                <input type="email" class="form-control" id="win1" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">第4組贏的機率</label>
+                <input type="email" class="form-control" id="win2" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">第7組贏的機率</label>
+                <input type="email" class="form-control" id="win3" aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">第2組贏的機率</label>
+                <input type="email" class="form-control" id="win4" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">第5組贏的機率</label>
+                <input type="email" class="form-control" id="win5" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">第8組贏的機率</label>
+                <input type="email" class="form-control" id="win6" aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">第3組贏的機率</label>
+                <input type="email" class="form-control" id="win7" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">第6組贏的機率</label>
+                <input type="email" class="form-control" id="win8" aria-describedby="emailHelp">
+              </div>
+            </div>
+          </div> -->
+
+
+        <div class="Img top" id=tabImg>
+          <img src="game.png" alt="123">
+        </div>
+
+        <table class="table top" id=table style="text-align:center;">
+          <thead>
+            <tr>
+              <th scope="col">Win</th>
+              <th scope="col">系館</th>
+              <th scope="col">小福</th>
+              <th scope="col">舊體</th>
+              <th scope="col">總圖</th>
+              <th scope="col">校門</th>
+              <th scope="col">新體</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-1"></div>
+    </div>
+
+
+
+
+  <!--==================================
+            import Bootstrap.js
+  ====================================-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--==================================
+            import jQuery.js
+  ====================================-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="function.js"></script>
+  <script type="text/javascript" src="game.js"></script>
+
+</body>
+
+</html>
